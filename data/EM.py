@@ -321,15 +321,6 @@ def EM_Algorithm(in_, out_):
         name = transcript
         length = (transcripts[transcript])[2]
         est = final_read_est[i]
-        # est = round(float(est))
-
-        """
-        # truncate
-        if est <= 0.00000000001:
-            est = 0.0
-        else:
-            est = round(float(est), 3)
-        """
 
         # to string
         s += name + "\t"
