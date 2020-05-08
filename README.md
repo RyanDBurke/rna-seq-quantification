@@ -54,7 +54,6 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
 ### <ins>Structure</ins>
     EM
     ├── LICENSE
-    ├── report.pdf                     (write-up of results, difficulties, and design)
     ├── README                   
     └── data
         ├── squant.py                   (reads user inputs)
