@@ -1,21 +1,27 @@
-# <ins>RNA-Seq Quantification Using the EM-Aglorithm </ins>
+# <ins>RNA-Seq Quantification Using the EM-Algorithm </ins>
 
 
 > Implements the Full-EM algorithm for transcript quantification from RNA-aligments
-> Takes in a transcript/alignment file (formatted properly below) and returns estimated
+> takes in a transcript/alignment file (formatted properly below) and returns estimated
 > read-counts for each transcript in the transcriptome.
 
-### Dependencies
+##
+
+### <ins>Dependencies</ins>
 * [Python 3.7](https://www.python.org/downloads/)
 * [Numpy](http://www.numpy.org/)
 * [Numba](https://pypi.org/project/numba/) (Speed-up expensive EM-Steps)
 * [SciPy](https://www.scipy.org/)
+
+##
 
 ### <ins>Execution</ins>
 ```
 $ cd data/ 
 $ ./squant.py squant --in <input-file> --out <output-file>
 ```
+
+##
 
 ### <ins>Input Data Format</ins>
 ```
@@ -43,6 +49,8 @@ aln2_txp:string <tab> aln2_ori:string <tab> aln2_pos:int <tab> aln2_alignment_pr
 alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_prob:double
 ```
 
+##
+
 ### <ins>Structure</ins>
     EM
     ├── LICENSE
@@ -55,6 +63,12 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
         ├── true_counts_small.tsv       (true-counts of sample input)
         └── quants.tsv                  (sample output)
 
-#### <ins> Future Goals </ins>
+##
+
+### <ins> Future Goals </ins>
 * Improve storage of effective length computations
 * More accurate convergence values to reflect more accurate read-estimations (within 10<sup>-4</sup>)
+* More data visualization (Spearman correlation plot)
+
+## 
+Written for my Bioinformatic Algorithms, Databases, and Tools course
