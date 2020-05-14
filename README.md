@@ -52,7 +52,7 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
 ##
 
 ### <ins>Structure</ins>
-    EM
+    EM-Algorithm
     ├── LICENSE
     ├── README                   
     └── data
@@ -67,7 +67,7 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
 ### <ins> Future Goals </ins>
 * Improve storage of effective length computations
 * More accurate convergence values to reflect more accurate read-estimations (within 10<sup>-4</sup>)
-* More data visualization (Spearman correlation plot)
+* Data visualization (Spearman correlation plot)
 
 ## 
 Written for my Bioinformatic Algorithms, Databases, and Tools course
