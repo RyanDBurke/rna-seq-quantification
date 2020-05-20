@@ -24,7 +24,7 @@ $ ./squant.py squant --in <input-file> --out <output-file>
 ##### Example Execution
 ```
 $ cd data/ 
-$ ./squant.py squant --in alignments.small.cmsc423.gz  --out quants.tsv 
+$ ./squant.py squant --in alignments.small.cmsc423.gz --out quants.tsv 
 ```
 
 ##
