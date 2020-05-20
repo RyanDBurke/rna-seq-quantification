@@ -21,6 +21,12 @@ $ cd data/
 $ ./squant.py squant --in <input-file> --out <output-file>
 ```
 
+##### Example Execution
+```
+$ cd data/ 
+$ ./squant.py squant --in alignments.small.cmsc423.gz  --out quants.tsv 
+```
+
 ##
 
 ### <ins>Input Data Format</ins>
@@ -56,18 +62,18 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
     ├── LICENSE
     ├── README                   
     └── data
-        ├── squant.py                   (reads user inputs)
-        ├── EM.py                       (algorithm in use)
-        ├── alignments.small.cmsc423    (sample input)
-        ├── true_counts_small.tsv       (true-counts of sample input)
-        └── quants.tsv                  (sample output)
+        ├── squant.py                       # reads user inputs
+        ├── EM.py                           # algorithm in use
+        ├── alignments.small.cmsc423.gz     # sample input
+        ├── true_counts_small.tsv           # true-counts of sample input
+        └── quants.tsv                      # sample output
 
 ##
 
 ### <ins> Future Goals </ins>
-* Improve storage of effective length computations
+* Improve storage of effective-length computations
 * More accurate convergence values to reflect more accurate read-estimations (within 10<sup>-4</sup>)
-* Data visualization (Spearman correlation plot)
+* Data visualization (spearman correlation plot)
 
 ## 
 Written for my Bioinformatic Algorithms, Databases, and Tools course
