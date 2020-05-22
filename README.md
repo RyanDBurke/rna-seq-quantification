@@ -74,6 +74,7 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
 * Improve storage of effective-length computations
 * More accurate convergence values to reflect more accurate read-estimations (within 10<sup>-4</sup>)
 * Data visualization (spearman correlation plot)
+* Add "default" execution command
 
 ## 
 Written for my Bioinformatic Algorithms, Databases, and Tools course
