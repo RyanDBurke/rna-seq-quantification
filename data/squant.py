@@ -13,38 +13,45 @@ import EM
 
 def squant():
 
-    # determine if a command was entered
-    if len(sys.argv) < 6:
-        print("please enter a valid tool")
+    # default execution
+    if (sys.argv[1].lower() == "default"):
+        input = "alignments_small.cs423.gz"
+        output = "quants.tsv"
+
     else:
 
-        squant = sys.argv[1]
-        in_ = sys.argv[2]
-        input = sys.argv[3]
-        out_ = sys.argv[4]
-        output = sys.argv[5]
+        # determine if a command was entered
+        if len(sys.argv) < 6:
+            print("please enter a valid tool")
+        else:
 
-        # check to see if flags were correctly typed
-        if (not squant == "squant") or (not in_ == "--in") or (not out_ == "--out"):
-            print('\033[31m' + "one of your flags was mistyped.")
-            print('\033[39m')
-            return
+            squant = sys.argv[1]
+            in_ = sys.argv[2]
+            input = sys.argv[3]
+            out_ = sys.argv[4]
+            output = sys.argv[5]
 
-        import time
-        start = time.time()
+            # check to see if flags were correctly typed
+            if (not squant == "squant") or (not in_ == "--in") or (not out_ == "--out"):
+                print('\033[31m' + "one of your flags was mistyped.")
+                print('\033[39m')
+                return
 
-        # call EM
-        EM.EM_Algorithm(input, output)
+    import time
+    start = time.time()
 
-        # print time
-        time = (time.time()-start)/60
-        print('runtime ~ ', round(time, 1), 'minutes')
+    # call EM
+    EM.EM_Algorithm(input, output)
 
-        # Nice little print-out
-        print('\033[31m' + "You can find results in " + output)
+    # print time
+    time = (time.time()-start)/60
+    print('runtime ~ ', round(time, 1), 'minutes')
 
-        # reset to default color
-        print('\033[39m') 
+    # Nice little print-out
+    print('\033[31m' + "You can find results in " + output)
+
+    # reset to default color
+    print('\033[39m') 
 
 "run our program"
 squant()
