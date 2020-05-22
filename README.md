@@ -21,10 +21,22 @@ $ cd data/
 $ ./squant.py squant --in <input-file> --out <output-file>
 ```
 
+##### Default Execution
+```
+$ cd data/ 
+$ ./squant.py default 
+```
+
 ##### Example Execution
 ```
 $ cd data/ 
 $ ./squant.py squant --in alignments.small.cmsc423.gz --out quants.tsv 
+```
+
+##### General Execution
+```
+$ cd data/ 
+$ ./squant.py squant --in <input-file>.gz --out <output>
 ```
 
 ##
