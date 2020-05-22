@@ -1,4 +1,4 @@
-# <ins>RNA-Seq Quantification Using the EM-Algorithm </ins>
+## <ins>RNA-Seq Quantification Using the EM-Algorithm </ins>
 
 
 > Implements the Full-EM algorithm for transcript quantification from RNA-aligments
