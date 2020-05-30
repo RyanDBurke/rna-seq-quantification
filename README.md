@@ -1,7 +1,7 @@
 ## <ins>RNA-Seq Quantification Using the EM-Algorithm </ins>
 
 
-> Implements the Full-EM algorithm for transcript quantification from RNA-aligments
+> Implements the Full-EM algorithm for transcript quantification from RNA-alignments
 > takes in a transcript/alignment file (formatted properly below) and returns estimated
 > read-counts for each transcript in the transcriptome.
 
