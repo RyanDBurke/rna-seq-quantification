@@ -13,6 +13,8 @@ read-counts for each transcript in the transcriptome.
 
 ## What Does it Do? <a name="cool"></a>
 
+It returns the estimated read-counts for each transcript in relation to the aligned-reads
+
 Steps:
 1. Parse the transcripts into space-efficient data structures
 2. Analyze alignment blocks and extract notable information (position, effective length, etc)
