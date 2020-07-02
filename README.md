@@ -1,47 +1,53 @@
-## <ins>RNA-Seq Quantification Using the EM-Algorithm </ins>
+# Table of Contents
 
+* [What is This?](#what)
+* [What Does it Do?](#cool)
+* [How Do I Execute?](#execute)
+* [File Structure](#structure)
+* [Future Goals](#goals)
 
-> Implements the Full-EM algorithm for transcript quantification from RNA-alignments
-> takes in a transcript/alignment file (formatted properly below) and returns estimated
-> read-counts for each transcript in the transcriptome.
+## What is This? <a name="what"></a>
+Implements the Expectation-Maximization (EM) algorithm for transcript quantification from RNA-alignments 
+takes in a transcript/alignment file (formatted properly below) and returns estimated 
+read-counts for each transcript in the transcriptome.
 
-##
+## What Does it Do? <a name="cool"></a>
 
-### <ins>Dependencies</ins>
+Steps:
+1. Parse the transcripts into space-efficient data structures
+2. Analyze alignment blocks and extract notable information (position, effective length, etc)
+3. Calculate relevant probabilities (Pr)
+* Pr(Selecting a position along this fragment from which to draw the read)
+* Pr(Alignment)
+* Pr(Selecting a fragment compatible with the observed length of the one implied by this read)
+4. Run the "E" and "M" steps of the EM algorithm until convergence.
+5. Observe estimated read-counts for each transcript
+
+## How Do I Execute? <a name="execute"></a>
+
+### (1) Clone
+```
+git clone https://github.com/RyanDBurke/RNA-seq-quantification-using-the-EM-algorithm.git
+```
+
+### (2) Dependencies
 * [Python 3.7](https://www.python.org/downloads/)
 * [Numpy](http://www.numpy.org/)
 * [Numba](https://pypi.org/project/numba/) (Speed-up expensive EM-Steps)
 * [SciPy](https://www.scipy.org/)
 
-##
-
-### <ins>Execution</ins>
-```
-$ cd data/ 
-$ ./squant.py squant --in <input-file> --out <output-file>
-```
-
-##### Default Execution
+### (3) Execution
+##### then, execute Default or with your own inputs/outputs
 ```
 $ cd data/ 
 $ ./squant.py default 
 ```
-
-##### Example Execution
-```
-$ cd data/ 
-$ ./squant.py squant --in alignments.small.cmsc423.gz --out quants.tsv 
-```
-
-##### General Execution
 ```
 $ cd data/ 
 $ ./squant.py squant --in <input-file>.gz --out <output>
 ```
 
-##
-
-### <ins>Input Data Format</ins>
+### (4) Input File Format
 ```
 number_of_transcripts:int
 <transcript_record_1>
@@ -67,9 +73,7 @@ aln2_txp:string <tab> aln2_ori:string <tab> aln2_pos:int <tab> aln2_alignment_pr
 alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_prob:double
 ```
 
-##
-
-### <ins>Structure</ins>
+## File Structure <a name="structure"></a>
     EM-Algorithm
     ├── LICENSE
     ├── README                   
@@ -80,9 +84,8 @@ alnk_txp:string <tab> alnk_ori:string <tab> alnk_pos:int <tab> alnk_alignment_pr
         ├── true_counts_small.tsv           # true-counts of sample input
         └── quants.tsv                      # sample output
 
-##
 
-### <ins> Future Goals </ins>
+## Future Goals <a name="goals"></a>
 * Improve storage of effective-length computations
 * More accurate convergence values to reflect more accurate read-estimations (within 10<sup>-4</sup>)
 * Data visualization (spearman correlation plot)
