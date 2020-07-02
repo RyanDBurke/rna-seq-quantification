@@ -17,9 +17,9 @@ Steps:
 1. Parse the transcripts into space-efficient data structures
 2. Analyze alignment blocks and extract notable information (position, effective length, etc)
 3. Calculate relevant probabilities (Pr)
-* Pr(Selecting a position along this fragment from which to draw the read)
-* Pr(Alignment)
-* Pr(Selecting a fragment compatible with the observed length of the one implied by this read)
+    * Pr(Selecting a position along this fragment from which to draw the read)
+    * Pr(Alignment)
+    * Pr(Selecting a fragment compatible with the observed length of the one implied by this read)
 4. Run the "E" and "M" steps of the EM algorithm until convergence.
 5. Observe estimated read-counts for each transcript
 
