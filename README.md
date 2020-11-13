@@ -1,15 +1,18 @@
+
+<br />
+<div align="center">📊</div>
+<br />
+<div align="center">Implements the Expectation-Maximization (EM) algorithm for transcript quantification from RNA-alignments 
+takes in a transcript/alignment file (formatted properly below) and returns estimated 
+read-counts for each transcript in the transcriptome.</div>
+<br />
+
 # Table of Contents
 
-* [What is This?](#what)
 * [What Does it Do?](#cool)
 * [How Do I Execute?](#execute)
 * [File Structure](#structure)
 * [Future Goals](#goals)
-
-## What is This? <a name="what"></a>
-Implements the Expectation-Maximization (EM) algorithm for transcript quantification from RNA-alignments 
-takes in a transcript/alignment file (formatted properly below) and returns estimated 
-read-counts for each transcript in the transcriptome.
 
 ## What Does it Do? <a name="cool"></a>
 
